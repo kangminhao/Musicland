@@ -106,13 +106,14 @@ struct PlaybackFullscreenView: View {
             }
             .padding()
             .background(
-                Rectangle()
-                    .foregroundColor(Color(artwork.averageColor ?? .gray))
-                    .saturation(0.5)
-                    .matchedGeometryEffect(id: (currentSong.title ?? "") + "frame", in: animation)
-                    .animation(.easeOut)
+                withAnimation(.easeOut) {
+                    Rectangle()
+                        .foregroundColor(Color(artwork.averageColor ?? .gray))
+                        .saturation(0.5)
+                        .matchedGeometryEffect(id: (currentSong.title ?? "") + "frame", in: animation)
+                }
+                
             )
-            
             .accentColor(Color(artwork.originalAverageColor ?? .systemPink))
         }
     }

@@ -30,9 +30,9 @@ struct RemoteSongCardView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             
             VStack(alignment: .leading) {
-                Text(song.name ?? "NA")
+                Text(song.name)
                     .font(.headline)
-                Text(song.artist ?? "NA")
+                Text(song.artist)
                     .font(.caption)
                     .foregroundColor(.secondary)
             }

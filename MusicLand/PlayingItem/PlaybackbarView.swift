@@ -69,9 +69,11 @@ struct PlaybackbarView: View {
                     .padding(.trailing)
                 }
                 .background(
-                    BlurView(style: .systemChromeMaterial)
-                        .matchedGeometryEffect(id: (currentSong.title ?? "") + "frame", in: animation)
-                        .animation(.easeOut)
+                    withAnimation(.easeOut) {
+                        BlurView(style: .systemChromeMaterial)
+                            .matchedGeometryEffect(id: (currentSong.title ?? "") + "frame", in: animation)
+                    }
+                    
                 )
                 .contextMenu {
                     

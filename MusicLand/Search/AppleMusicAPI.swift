@@ -12,7 +12,7 @@ class AppleMusicAPI {
     
     static let shared = AppleMusicAPI()
     
-    static let developerToken = "eyJhbGciOiJFUzI1NiIsImtpZCI6IjJGRzJaWk44RlgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJINVFXNk0zUURDIiwiZXhwIjoxNjcxMzMxNTcyLCJpYXQiOjE2NzEyODgzNzJ9.3NoBnqPyWNIP0iXr2YAlK0hbmPg2fXynmkNDMbxWJwXIdsc6foe2GtKpCxHtL-WTDB8jW4sUduE0SSOFW7ifdA"
+    static let developerToken = "eyJhbGciOiJFUzI1NiIsImtpZCI6IjJGRzJaWk44RlgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJINVFXNk0zUURDIiwiZXhwIjoxNjg3NTg5NDc1LCJpYXQiOjE2NzE4NjQ2NzV9.O_rgSypW5JuPaU-wYOlMsxibW9r60HFSX6SmRddWw-uI7cQP7jUMDyWwQ4HtLhfPuJnVXvXx9p6ptrBaRdda7Q"
     
     var storeFrontId: String {
         
