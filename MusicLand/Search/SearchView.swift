@@ -20,7 +20,11 @@ struct SearchView: View {
         
         VStack {
             
-            TextField("Search Songs", text: $searchText, onCommit: {
+            TextField("Search Songs", text: $searchText, onEditingChanged: { isEditing in
+                
+                model.isTyping = isEditing ? true : false
+                
+            }, onCommit: {
                 UIApplication.shared.resignFirstResponder()
                 
                 if searchText.isEmpty {
@@ -48,6 +52,8 @@ struct SearchView: View {
                 ForEach(searchResults, id:\.self) { song in
                     RemoteSongCardView(song: song)
                 }
+                
+    
             }
             .gesture(
                 DragGesture()
@@ -58,9 +64,6 @@ struct SearchView: View {
         
         }
         .padding(.vertical)
-        .onTapGesture {
-            hideKeyboard()
-        }
     }
 }
 
@@ -78,5 +81,20 @@ extension View {
             from: nil,
             for: nil
         )
+    }
+}
+
+struct DismissingKeyboard: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .onTapGesture {
+                let keyWindow = UIApplication.shared.connectedScenes
+                    .filter({$0.activationState == .foregroundActive})
+                    .map({$0 as? UIWindowScene})
+                    .compactMap({$0})
+                    .first?.windows
+                    .filter({$0.isKeyWindow}).first
+                keyWindow?.endEditing(true)
+            }
     }
 }

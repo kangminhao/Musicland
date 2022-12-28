@@ -30,12 +30,12 @@ struct NowPlayingView: View {
                     .environmentObject(model)
                     .onTapGesture {
                         gestureStore.height = 0
-                        withAnimation(Animation.spring(response: 0.7, dampingFraction: 0.85)) {
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.95, blendDuration: 0.95)) {
                             Haptics.softRoll()
                             model.isPlayerViewPresented.toggle()
                         }
                     }
-                    .padding(.bottom, 48)
+                    .padding(.bottom, model.isTyping ? 0 : 48)
             }
             
         }
@@ -51,11 +51,12 @@ struct NowPlayingView: View {
                 gestureStore.height = translationheight
                 
                 if translationheight > 50 {
-                    withAnimation(Animation.spring(response: 0.7, dampingFraction: 0.85)) {
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.95, blendDuration: 0.95)) {
                         model.isPlayerViewPresented = false
                     }
+            
                 } else {
-                    withAnimation(Animation.spring(response: 0.7, dampingFraction: 0.85)) {
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.95, blendDuration: 0.95)) {
                         gestureStore.height = 0
                     }
                     

@@ -49,7 +49,7 @@ struct PlaybackbarView: View {
                     HStack(spacing: 0) {
                         PlayPauseButton()
                             .environmentObject(model)
-                            .matchedGeometryEffect(id: (currentSong.title ?? "") + "pay_button", in: animation)
+                            .matchedGeometryEffect(id: (currentSong.title ?? "") + "play_button", in: animation)
                             .font(.largeTitle)
                             
                         if model.queuedSongs.count > 1 {
@@ -76,7 +76,6 @@ struct PlaybackbarView: View {
                     
                 )
                 .contextMenu {
-                    
                     Button(action: {
                         choosePlaylistOptionsPresented.toggle()
                     }, label: {

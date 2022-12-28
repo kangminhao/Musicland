@@ -25,4 +25,6 @@ class Model: ObservableObject {
     @Published var uiImage = UIImage()
     
     @Published var queuedSongs = [MPMediaItem]()
+    
+    @Published var isTyping = false
 }

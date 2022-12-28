@@ -34,7 +34,6 @@ struct MusicLandApp: App {
     func updateSongs() {
         SKCloudServiceController.requestAuthorization { status in
             if status == .authorized {
-                
                 let songsQuery = MPMediaQuery.songs()
                 if let songs = songsQuery.items {
                     let desc = NSSortDescriptor(key: MPMediaItemPropertyLastPlayedDate, ascending: false)

@@ -38,7 +38,6 @@ struct PlaybackFullscreenView: View {
                     
                     
                     Menu {
-                        
                         Button(action: {
                             playlistSheetPresented.toggle()
                         }, label: {
@@ -72,16 +71,26 @@ struct PlaybackFullscreenView: View {
                     
                     VStack {
                         HStack(spacing: 0) {
+                            Image(systemName: "repeat")
+                                .font(.largeTitle)
+                                .font(.system(size: 45))
+                                .multilineTextAlignment(.center)
+                                .onTapGesture {
+                                    model.musicPlayer.repeatMode = .one
+                                }
+                            
                             Image(systemName: "gobackward.15")
                                 .font(.largeTitle)
                                 .font(.system(size: 45))
+                                .padding(.leading, 30)
+                                .multilineTextAlignment(.center)
                                 .onTapGesture {
                                     model.musicPlayer.currentPlaybackTime -= 15
                                 }
                             
                             PlayPauseButton()
                                 .environmentObject(model)
-                                .matchedGeometryEffect(id: (currentSong.title ?? "") + "pay_button", in: animation)
+                                .matchedGeometryEffect(id: (currentSong.title ?? "") + "play_button", in: animation)
                                 .font(.system(size: 50))
                                 .padding(.horizontal, 30)
                                 .multilineTextAlignment(.center)
@@ -89,10 +98,21 @@ struct PlaybackFullscreenView: View {
                             Image(systemName: "goforward.15")
                                 .font(.largeTitle)
                                 .font(.system(size: 45))
+                                .padding(.trailing, 30)
                                 .multilineTextAlignment(.center)
                                 .onTapGesture {
                                     model.musicPlayer.currentPlaybackTime += 15
                                 }
+                            
+                            Image(systemName: "stop.fill")
+                                .font(.largeTitle)
+                                .font(.system(size: 45))
+                                .onTapGesture {
+                                    model.musicPlayer.skipToBeginning()
+                                    model.musicPlayer.stop()
+                                }
+                            
+                            
                         }
                         
                         AirplayView()
@@ -115,6 +135,9 @@ struct PlaybackFullscreenView: View {
                 
             )
             .accentColor(Color(artwork.originalAverageColor ?? .systemPink))
+            .onAppear {
+                hideKeyboard()
+            }
         }
     }
 }

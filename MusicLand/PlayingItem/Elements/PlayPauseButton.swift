@@ -19,7 +19,7 @@ struct PlayPauseButton: View {
             .onReceive(timer, perform: { _ in
                 let isPlaying = model.musicPlayer.playbackState == .playing
                 if model.isPlaying != isPlaying {
-                    withAnimation(Animation.spring(response: 0.7, dampingFraction: 0.85)) {
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                         model.isPlaying = isPlaying
                     }
                 }
@@ -34,18 +34,14 @@ struct PlayPauseButton: View {
                 DispatchQueue.main.async {
                     if model.musicPlayer.playbackState == .paused || model.musicPlayer.playbackState == .stopped {
                         model.musicPlayer.play()
-//                        DispatchQueue.main.sync {
-                            withAnimation(Animation.spring(response: 0.6, dampingFraction: 0.7)) {
-                                model.isPlaying = true
-                            }
-//                        }
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                            model.isPlaying = true
+                        }
                     } else {
                         model.musicPlayer.pause()
-//                        DispatchQueue.main.sync {
-                            withAnimation(Animation.spring(response: 0.6, dampingFraction: 0.7)) {
-                                model.isPlaying = false
-                            }
-//                        }
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                            model.isPlaying = false
+                        }
                     }
                 }
                 

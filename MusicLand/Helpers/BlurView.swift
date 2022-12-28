@@ -34,7 +34,6 @@ public class Haptics {
         hardHammer.prepare()
     }
     
-    // Public
     public static func softRoll(_ intensity: CGFloat = 0.9) {
         shared.softHammer.impactOccurred(intensity: intensity)
     }

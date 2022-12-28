@@ -32,6 +32,7 @@
 		A1D3D6B0294A0442001114C9 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3D6AF294A0442001114C9 /* Song.swift */; };
 		A1D3D6B2294A044C001114C9 /* RemoteSongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3D6B1294A044C001114C9 /* RemoteSongCardView.swift */; };
 		A1D3D6B4294A0465001114C9 /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3D6B3294A0465001114C9 /* AppleMusicAPI.swift */; };
+		A1F08246295C9A7C0045BA38 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F08245295C9A7C0045BA38 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,8 +75,8 @@
 		A1D3D6B1294A044C001114C9 /* RemoteSongCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSongCardView.swift; sourceTree = "<group>"; };
 		A1D3D6B3294A0465001114C9 /* AppleMusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
 		A1D3D6B9294E1663001114C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		A1D3D6C0294E16DE001114C9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A1D3D6C2294E16DE001114C9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A1F08245295C9A7C0045BA38 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +186,7 @@
 		A1D3D69F294334A6001114C9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A1F08245295C9A7C0045BA38 /* Extensions.swift */,
 				A1D3D6A0294334A6001114C9 /* SwiftyJSON.swift */,
 				A1D3D6A1294334A6001114C9 /* BlurView.swift */,
 				A1D3D6A2294334A6001114C9 /* CornerRadius.swift */,
@@ -214,7 +216,6 @@
 		A1D3D6BF294E16DE001114C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A1D3D6C0294E16DE001114C9 /* WidgetKit.framework */,
 				A1D3D6C2294E16DE001114C9 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
@@ -297,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F08246295C9A7C0045BA38 /* Extensions.swift in Sources */,
 				A1D3D69D29433478001114C9 /* AirplayView.swift in Sources */,
 				A1D3D6AE294A0417001114C9 /* SearchView.swift in Sources */,
 				A1D3D68E2943346C001114C9 /* LibraryView.swift in Sources */,

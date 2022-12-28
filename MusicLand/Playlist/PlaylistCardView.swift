@@ -48,7 +48,6 @@ struct PlaylistCardView: View {
                     .blur(radius: 50, opaque: true)
                     .cornerRadius(10, corners: [.bottomLeft, .bottomRight])
                 
-                
 //                BlurView(style: .systemUltraThinMaterial)
 //                    .cornerRadius(10, corners: [.bottomLeft, .bottomRight])
             )

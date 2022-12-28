@@ -30,7 +30,6 @@ struct InvisibleRefreshView: View {
 
                 }) { (queue, error) in
 
-                  // Completion for when items' position update
                   if error != nil {
                     print(error!)
                   }
@@ -39,7 +38,6 @@ struct InvisibleRefreshView: View {
                 if model.currentSong?.playbackStoreID != model.musicPlayer.nowPlayingItem?.playbackStoreID {
                     model.currentSong = model.musicPlayer.nowPlayingItem
                     
-                    // Image fetching for current song
                     DispatchQueue.global(qos: .userInitiated).async {
                         
                         if let image = model.musicPlayer.nowPlayingItem?.artwork?.image(at: CGSize(width: 100, height: 100)) {
