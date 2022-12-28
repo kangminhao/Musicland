@@ -16,6 +16,8 @@ struct PlaybackFullscreenView: View {
     @State var disclosureExpanded = false
     @State var playlistSheetPresented = false
     
+    @State var isRepeat = false
+    
     var body: some View {
         if let currentSong = model.currentSong {
             
@@ -75,8 +77,14 @@ struct PlaybackFullscreenView: View {
                                 .font(.largeTitle)
                                 .font(.system(size: 45))
                                 .multilineTextAlignment(.center)
+                                .foregroundColor(isRepeat ? .blue : .white)
                                 .onTapGesture {
-                                    model.musicPlayer.repeatMode = .one
+                                    if isRepeat {
+                                        model.musicPlayer.repeatMode = .none
+                                    } else {
+                                        model.musicPlayer.repeatMode = .one
+                                    }
+                                    isRepeat.toggle()
                                 }
                             
                             Image(systemName: "gobackward.15")
