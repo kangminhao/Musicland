@@ -9,8 +9,7 @@ import SwiftUI
 import MediaPlayer
 
 struct PlaylistView: View {
-    @State var playlists: [MPMediaItemCollection]
-   // @EnvironmentObject var model: Model
+    let playlists: [MPMediaItemCollection]
 
     var body: some View {
         NavigationView {
@@ -34,7 +33,7 @@ struct PlaylistView: View {
                     ForEach(playlists, id:\.self) { playlist in
                         VStack(spacing: 0) {
                             NavigationLink(
-                                destination: PlaylistDetailView(playlist: playlist),
+                                destination: PlaylistDetailView(viewModel: PlaylistDetailViewModel(playlist: playlist)),
                                 label: {
                                     PlaylistCardView(playlist: playlist)
                                         .drawingGroup()

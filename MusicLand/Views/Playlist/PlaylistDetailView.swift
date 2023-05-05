@@ -9,25 +9,23 @@ import SwiftUI
 import MediaPlayer
 
 struct PlaylistDetailView: View {
-    
+    let viewModel: PlaylistDetailViewModel
     @Environment(\.colorScheme) var colorScheme
-    
-    let playlist: MPMediaItemCollection
-    
+        
     var body: some View {
         List {
             HStack {
                 Spacer(minLength: 0)
                 
                 VStack {
-                    Image(uiImage: (playlist.representativeItem?.artwork?.image(at: CGSize(width: 500, height: 500)) ?? UIImage(named: "music_background")) ?? UIImage())
+                    Image(uiImage: viewModel.coverImage)
                         .resizable()
                         .frame(width: 300, height: 300)
                         .cornerRadius(10)
                         .shadow(color: Color.black.opacity(0.2), radius: 15, x: 0, y: 30)
                     
                     VStack {
-                        Text("\(playlist.value(forProperty: MPMediaPlaylistPropertyName) as? String ?? "NA")")
+                        Text(viewModel.playlistName)
                             .bold()
                             .font(.title2)
                         
@@ -43,10 +41,7 @@ struct PlaylistDetailView: View {
                             .background(BlurView(style: .systemUltraThinMaterialDark).opacity(colorScheme == .light ? 0.3 : 0.8))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .onTapGesture {
-                                let desc = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: playlist.items))
-                                
-                                MusicManager.shared.musicPlayer.setQueue(with: desc)
-                                MusicManager.shared.musicPlayer.play()
+                                viewModel.play()
                             }
                             
                             HStack {
@@ -60,10 +55,7 @@ struct PlaylistDetailView: View {
                             .background(BlurView(style: .systemUltraThinMaterialDark).opacity(colorScheme == .light ? 0.3 : 0.8))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .onTapGesture {
-                                let desc = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: playlist.items.shuffled()))
-                                
-                                MusicManager.shared.musicPlayer.setQueue(with: desc)
-                                MusicManager.shared.musicPlayer.play()
+                                viewModel.shuffle()
                             }
                         }
                     }
@@ -80,9 +72,9 @@ struct PlaylistDetailView: View {
                     .font(.caption)
                 Spacer()
             }.padding(.vertical, 5)) {
-                ForEach(playlist.items, id:\.self) { song in
+                ForEach(viewModel.playlist.items, id:\.self) { song in
                     VStack(spacing: 0) {
-                        SongCardView(song: song)
+                        SongCardView(viewModel: SongCardViewModel(song: song))
                     }
                 }
                 
@@ -96,7 +88,7 @@ struct PlaylistDetailView: View {
         .navigationBarTitle(Text(""), displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Text("\(playlist.items.count) Songs")
+                Text("\(viewModel.playlist.items.count) Songs")
             }
         }
     }

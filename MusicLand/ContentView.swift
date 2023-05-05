@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
+import StoreKit
+import MediaPlayer
 
 struct ContentView: View {
-    
-    @ObservedObject var model = Model.shared
-    
+        
     @Environment(\.scenePhase) var scenePhase
 
     @State var onActive = false
@@ -24,4 +24,5 @@ struct ContentView: View {
 //            })
     }
 }
+
 

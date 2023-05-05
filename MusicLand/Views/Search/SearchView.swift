@@ -13,9 +13,7 @@ struct SearchView: View {
     @StateObject var viewModel = SearchViewModel()
                 
     var body: some View {
-        
         VStack {
-            
             TextField("Search Songs", text: $viewModel.searchText, onEditingChanged: { isEditing in
                 
                 isTyping = isEditing ? true : false
@@ -36,8 +34,6 @@ struct SearchView: View {
                 ForEach(viewModel.searchResults, id:\.self) { song in
                     RemoteSongCardView(song: song)
                 }
-                
-    
             }
             .gesture(
                 DragGesture()

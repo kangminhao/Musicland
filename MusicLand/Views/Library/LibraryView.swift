@@ -9,16 +9,14 @@ import SwiftUI
 import MediaPlayer
 
 struct LibraryView: View {
-    @State var songs: [MPMediaItem]
-    //@EnvironmentObject var model: Model
+    let songs: [MPMediaItem]
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(songs, id:\.self) { song in
                     VStack(spacing: 0) {
-                        SongCardView(song: song)
-                            //.environmentObject(model)
+                        SongCardView(viewModel: SongCardViewModel(song: song))
                     }
                     
                 }

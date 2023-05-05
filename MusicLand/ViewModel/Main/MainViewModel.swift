@@ -31,6 +31,8 @@ class MainViewModel: ObservableObject {
                 let playlistQuery = MPMediaQuery.playlists()
                 if let playlists = playlistQuery.collections {
                     self.playlists = playlists
+                    
+                    print("playlists: ", playlists)
                 }
             }
         }

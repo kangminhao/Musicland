@@ -7,32 +7,23 @@
 
 import SwiftUI
 import MediaPlayer
-import SDWebImageSwiftUI
 
 struct SongCardView: View {
-    
-    //@EnvironmentObject var model: Model
-    
-    let song: MPMediaItem
-    
-    @State var artwork: UIImage = UIImage(named: "music_background") ?? UIImage()
-    @State var manager: ImageManager?
-    
-    @State var choosePlaylistOptionsPresented = false
-    
+    let viewModel: SongCardViewModel
+                
     var body: some View {
         
         HStack {
-            Image(uiImage: artwork)
+            Image(uiImage: viewModel.coverImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             
             VStack(alignment: .leading) {
-                Text(song.title ?? "NA")
+                Text(viewModel.title)
                     .font(.headline)
-                Text(song.artist ?? "NA")
+                Text(viewModel.artist)
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
@@ -40,11 +31,7 @@ struct SongCardView: View {
             Spacer()
             
             Button(action: {
-                DispatchQueue.main.async {
-                    let desc = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: [song]))
-                    MusicManager.shared.musicPlayer.setQueue(with: desc)
-                    MusicManager.shared.musicPlayer.play()
-                }
+                viewModel.play()
             }, label: {
                 Image(systemName: "play.fill")
                     .font(.title)
@@ -52,37 +39,18 @@ struct SongCardView: View {
             })
         }
         .onAppear() {
-            
-            DispatchQueue.global(qos: .userInitiated).async {
-                if let image = (song.artwork?.image(at: CGSize(width: 140, height: 140))) {
-                    artwork = image
-                }
-            }
-            
+            viewModel.loadImage()
         }
         .contextMenu {
             
             Button(action: {
-                choosePlaylistOptionsPresented.toggle()
+                viewModel.choosePlaylistOptionsPresented.toggle()
             }, label: {
                 Text("Add to Playlist")
             })
 
             Button(action: {
-                MusicManager.shared.musicPlayer.perform(queueTransaction: { queue in
-
-                  let afterItem = queue.items.last
-                    let desc = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: [song]))
-                    
-                  return queue.insert(desc, after: afterItem)
-
-                }) { (queue, error) in
-
-                  // Completion for when items' position update
-                  if error != nil {
-                    print(error!)
-                  }
-                }
+                viewModel.addToQueue()
             }, label: {
                 Text("Add to queue")
             })

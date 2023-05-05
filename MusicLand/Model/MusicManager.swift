@@ -16,7 +16,9 @@ class MusicManager: ObservableObject {
     
     @Published var currentSong: MPMediaItem?
     @Published var isPlayerViewPresented = false
-        
+    @Published var librarySongs: [MPMediaItem] = []
+    @Published var playlists: [MPMediaItemCollection] = []
+
     @Published var isPlaying = false
     
     @Published var uiImage = UIImage()

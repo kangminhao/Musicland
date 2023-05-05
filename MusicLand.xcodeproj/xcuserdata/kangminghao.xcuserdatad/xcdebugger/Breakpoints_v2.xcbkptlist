@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F831481D-B160-41A9-A9E4-3CD6B5B75745"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicLand/ViewModel/Main/MainViewModel.swift"
@@ -81,7 +81,7 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "updateSongs()"
-            landmarkType = "9">
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "F831481D-B160-41A9-A9E4-3CD6B5B75745 - 83eee7c3032fab5e"
@@ -113,6 +113,36 @@
                   endingLineNumber = "24"
                   offsetFromSymbolStart = "84">
                </Location>
+               <Location
+                  uuid = "F831481D-B160-41A9-A9E4-3CD6B5B75745 - 83eee7c3032fab5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicLand.MainViewModel.updateSongs() -&gt; ()"
+                  moduleName = "MusicLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangminghao/Desktop/Demo/MusicLand/MusicLand/ViewModel/Main/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "F831481D-B160-41A9-A9E4-3CD6B5B75745 - 1efb4b94d0614a5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.SKCloudServiceAuthorizationStatus) -&gt; () in MusicLand.MainViewModel.updateSongs() -&gt; ()"
+                  moduleName = "MusicLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangminghao/Desktop/Demo/MusicLand/MusicLand/ViewModel/Main/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "72">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -129,7 +159,7 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "updateSongs()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -145,7 +175,167 @@
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "updateSongs()"
-            landmarkType = "9">
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D58E58E1-5F8A-4222-9EE6-8A77368F0880"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicLand/Views/Playlist/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D58E58E1-5F8A-4222-9EE6-8A77368F0880 - ec0933e50614e09a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.MPMediaItemCollection) -&gt; SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt; in closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;__C.MPMediaItemCollection&gt;, __C.MPMediaItemCollection, SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitle(_: SwiftUI.Text, displayMode: SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in MusicLand.PlaylistView.body.getter : some"
+                  moduleName = "MusicLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangminghao/Desktop/Demo/MusicLand/MusicLand/Views/Playlist/PlaylistView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "D58E58E1-5F8A-4222-9EE6-8A77368F0880 - 22ead93e3365bf78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt; in closure #1 (__C.MPMediaItemCollection) -&gt; SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt; in closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;__C.MPMediaItemCollection&gt;, __C.MPMediaItemCollection, SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitle(_: SwiftUI.Text, displayMode: SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in MusicLand.PlaylistView.body.getter : some"
+                  moduleName = "MusicLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangminghao/Desktop/Demo/MusicLand/MusicLand/Views/Playlist/PlaylistView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C8DEC52-DCCC-4904-BB5E-2735287AE9EB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicLand/Views/Playlist/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9C8DEC52-DCCC-4904-BB5E-2735287AE9EB - 3a3a1fb3c6708775"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;__C.MPMediaItemCollection&gt;, __C.MPMediaItemCollection, SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitle(_: SwiftUI.Text, displayMode: SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in MusicLand.PlaylistView.body.getter : some"
+                  moduleName = "MusicLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangminghao/Desktop/Demo/MusicLand/MusicLand/Views/Playlist/PlaylistView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "9C8DEC52-DCCC-4904-BB5E-2735287AE9EB - ec0933e50614e09a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.MPMediaItemCollection) -&gt; SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt; in closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;__C.MPMediaItemCollection&gt;, __C.MPMediaItemCollection, SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitle(_: SwiftUI.Text, displayMode: SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in MusicLand.PlaylistView.body.getter : some"
+                  moduleName = "MusicLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangminghao/Desktop/Demo/MusicLand/MusicLand/Views/Playlist/PlaylistView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A87E945-2394-47F8-AC29-0E31EB4937DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicLand/Views/Playlist/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2A87E945-2394-47F8-AC29-0E31EB4937DD - 3a3a1fb3c6708775"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;__C.MPMediaItemCollection&gt;, __C.MPMediaItemCollection, SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitle(_: SwiftUI.Text, displayMode: SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in MusicLand.PlaylistView.body.getter : some"
+                  moduleName = "MusicLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangminghao/Desktop/Demo/MusicLand/MusicLand/Views/Playlist/PlaylistView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "2A87E945-2394-47F8-AC29-0E31EB4937DD - ec0933e50614e09a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.MPMediaItemCollection) -&gt; SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt; in closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;__C.MPMediaItemCollection&gt;, __C.MPMediaItemCollection, SwiftUI.VStack&lt;SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.drawingGroup(opaque: Swift.Bool, colorMode: SwiftUI.ColorRenderingMode) -&gt; some&gt;&gt;.0, MusicLand.PlaylistDetailView&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitle(_: SwiftUI.Text, displayMode: SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in MusicLand.PlaylistView.body.getter : some"
+                  moduleName = "MusicLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangminghao/Desktop/Demo/MusicLand/MusicLand/Views/Playlist/PlaylistView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A58B575-96FE-4729-8EC2-E97952198597"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicLand/Views/Search/SearchView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
