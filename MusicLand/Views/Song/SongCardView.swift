@@ -11,7 +11,7 @@ import SDWebImageSwiftUI
 
 struct SongCardView: View {
     
-    @EnvironmentObject var model: Model
+    //@EnvironmentObject var model: Model
     
     let song: MPMediaItem
     
@@ -42,8 +42,8 @@ struct SongCardView: View {
             Button(action: {
                 DispatchQueue.main.async {
                     let desc = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: [song]))
-                    model.musicPlayer.setQueue(with: desc)
-                    model.musicPlayer.play()
+                    MusicManager.shared.musicPlayer.setQueue(with: desc)
+                    MusicManager.shared.musicPlayer.play()
                 }
             }, label: {
                 Image(systemName: "play.fill")
@@ -69,7 +69,7 @@ struct SongCardView: View {
             })
 
             Button(action: {
-                model.musicPlayer.perform(queueTransaction: { queue in
+                MusicManager.shared.musicPlayer.perform(queueTransaction: { queue in
 
                   let afterItem = queue.items.last
                     let desc = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: [song]))

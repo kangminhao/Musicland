@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct NowPlayingView: View {
-    
     @Namespace var animation
     
-    @EnvironmentObject var model: Model
+    @EnvironmentObject var model: MusicManager
     
     @GestureState var gestureState = CGSize.zero
     @State var gestureStore = CGSize.zero
+    @Binding var isTyping: Bool
     
     var body: some View {
         
         Group {
-            if model.isPlayerViewPresented {
+            if MusicManager.shared.isPlayerViewPresented {
                 PlaybackFullscreenView(animation: animation)
                     .environmentObject(model)
                     .offset(CGSize(width: gestureState.width + gestureStore.width, height: gestureState.height + gestureStore.height))
@@ -35,7 +35,7 @@ struct NowPlayingView: View {
                             model.isPlayerViewPresented.toggle()
                         }
                     }
-                    .padding(.bottom, model.isTyping ? 0 : 48)
+                    .padding(.bottom, isTyping ? 0 : 48)
             }
             
         }

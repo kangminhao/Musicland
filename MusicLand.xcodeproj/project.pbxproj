@@ -32,6 +32,14 @@
 		A1D3D6B0294A0442001114C9 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3D6AF294A0442001114C9 /* Song.swift */; };
 		A1D3D6B2294A044C001114C9 /* RemoteSongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3D6B1294A044C001114C9 /* RemoteSongCardView.swift */; };
 		A1D3D6B4294A0465001114C9 /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3D6B3294A0465001114C9 /* AppleMusicAPI.swift */; };
+		A1E9D4922A027176008C65E5 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9D4912A027176008C65E5 /* Haptics.swift */; };
+		A1E9D4952A03B625008C65E5 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9D4942A03B625008C65E5 /* LibraryViewModel.swift */; };
+		A1E9D4972A03B90D008C65E5 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9D4962A03B90D008C65E5 /* MusicManager.swift */; };
+		A1E9D4992A03B91C008C65E5 /* AppleMusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9D4982A03B91C008C65E5 /* AppleMusicService.swift */; };
+		A1E9D49B2A03B946008C65E5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9D49A2A03B946008C65E5 /* MainView.swift */; };
+		A1E9D49E2A03B9B8008C65E5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9D49D2A03B9B8008C65E5 /* MainViewModel.swift */; };
+		A1E9D4A12A03BF5D008C65E5 /* InvisibleRefreshViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9D4A02A03BF5D008C65E5 /* InvisibleRefreshViewModel.swift */; };
+		A1E9D4A32A03C29F008C65E5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9D4A22A03C29F008C65E5 /* SearchViewModel.swift */; };
 		A1F08246295C9A7C0045BA38 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F08245295C9A7C0045BA38 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +84,14 @@
 		A1D3D6B3294A0465001114C9 /* AppleMusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
 		A1D3D6B9294E1663001114C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A1D3D6C2294E16DE001114C9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A1E9D4912A027176008C65E5 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		A1E9D4942A03B625008C65E5 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		A1E9D4962A03B90D008C65E5 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		A1E9D4982A03B91C008C65E5 /* AppleMusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicService.swift; sourceTree = "<group>"; };
+		A1E9D49A2A03B946008C65E5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A1E9D49D2A03B9B8008C65E5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A1E9D4A02A03BF5D008C65E5 /* InvisibleRefreshViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleRefreshViewModel.swift; sourceTree = "<group>"; };
+		A1E9D4A22A03C29F008C65E5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A1F08245295C9A7C0045BA38 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,13 +128,11 @@
 			isa = PBXGroup;
 			children = (
 				A1D3D6B9294E1663001114C9 /* Info.plist */,
-				A1D3D6AC294A03F3001114C9 /* Search */,
-				A1D3D69F294334A6001114C9 /* Helpers */,
-				A1D3D68F29433477001114C9 /* PlayingItem */,
-				A1D3D68C2943346C001114C9 /* Library */,
-				A1D3D6852943345E001114C9 /* Playlist */,
-				A1D3D6A9294A03D3001114C9 /* Song */,
+				A1E9D48F2A026F22008C65E5 /* Views */,
+				A1D3D6A1294334A6001114C9 /* BlurView.swift */,
+				A1E9D4902A026F34008C65E5 /* ViewModel */,
 				A1D3D6822943342E001114C9 /* Model */,
+				A1D3D69F294334A6001114C9 /* Helpers */,
 				A1D3D674294331D1001114C9 /* MusicLandApp.swift */,
 				A1D3D676294331D1001114C9 /* ContentView.swift */,
 				A1D3D678294331D2001114C9 /* Assets.xcassets */,
@@ -138,7 +152,12 @@
 		A1D3D6822943342E001114C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1D3D6B3294A0465001114C9 /* AppleMusicAPI.swift */,
+				A1D3D6AF294A0442001114C9 /* Song.swift */,
 				A1D3D6832943343A001114C9 /* Model.swift */,
+				A1E9D4912A027176008C65E5 /* Haptics.swift */,
+				A1E9D4962A03B90D008C65E5 /* MusicManager.swift */,
+				A1E9D4982A03B91C008C65E5 /* AppleMusicService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,8 +183,8 @@
 		A1D3D68F29433477001114C9 /* PlayingItem */ = {
 			isa = PBXGroup;
 			children = (
-				A1D3D69029433477001114C9 /* PlaybackFullscreenView.swift */,
 				A1D3D69129433477001114C9 /* PlaybackbarView.swift */,
+				A1D3D69029433477001114C9 /* PlaybackFullscreenView.swift */,
 				A1D3D69229433477001114C9 /* Elements */,
 				A1D3D69629433477001114C9 /* AirplayView.swift */,
 				A1D3D69729433477001114C9 /* NowPlayingView.swift */,
@@ -188,7 +207,6 @@
 			children = (
 				A1F08245295C9A7C0045BA38 /* Extensions.swift */,
 				A1D3D6A0294334A6001114C9 /* SwiftyJSON.swift */,
-				A1D3D6A1294334A6001114C9 /* BlurView.swift */,
 				A1D3D6A2294334A6001114C9 /* CornerRadius.swift */,
 			);
 			path = Helpers;
@@ -198,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				A1D3D6AA294A03D3001114C9 /* SongCardView.swift */,
+				A1D3D6B1294A044C001114C9 /* RemoteSongCardView.swift */,
 			);
 			path = Song;
 			sourceTree = "<group>";
@@ -206,9 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				A1D3D6AD294A0417001114C9 /* SearchView.swift */,
-				A1D3D6B3294A0465001114C9 /* AppleMusicAPI.swift */,
-				A1D3D6AF294A0442001114C9 /* Song.swift */,
-				A1D3D6B1294A044C001114C9 /* RemoteSongCardView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -219,6 +235,54 @@
 				A1D3D6C2294E16DE001114C9 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1E9D48F2A026F22008C65E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1E9D49C2A03B953008C65E5 /* Main */,
+				A1D3D6AC294A03F3001114C9 /* Search */,
+				A1D3D68C2943346C001114C9 /* Library */,
+				A1D3D6A9294A03D3001114C9 /* Song */,
+				A1D3D68F29433477001114C9 /* PlayingItem */,
+				A1D3D6852943345E001114C9 /* Playlist */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1E9D4902A026F34008C65E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1E9D49F2A03B9C0008C65E5 /* Main */,
+				A1E9D4932A03B60D008C65E5 /* Library */,
+				A1E9D4A02A03BF5D008C65E5 /* InvisibleRefreshViewModel.swift */,
+				A1E9D4A22A03C29F008C65E5 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1E9D4932A03B60D008C65E5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A1E9D4942A03B625008C65E5 /* LibraryViewModel.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A1E9D49C2A03B953008C65E5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A1E9D49A2A03B946008C65E5 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A1E9D49F2A03B9C0008C65E5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A1E9D49D2A03B9B8008C65E5 /* MainViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,28 +363,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1F08246295C9A7C0045BA38 /* Extensions.swift in Sources */,
+				A1E9D49B2A03B946008C65E5 /* MainView.swift in Sources */,
 				A1D3D69D29433478001114C9 /* AirplayView.swift in Sources */,
 				A1D3D6AE294A0417001114C9 /* SearchView.swift in Sources */,
 				A1D3D68E2943346C001114C9 /* LibraryView.swift in Sources */,
 				A1D3D6B4294A0465001114C9 /* AppleMusicAPI.swift in Sources */,
 				A1D3D68A2943345E001114C9 /* PlaylistCardView.swift in Sources */,
 				A1D3D6B0294A0442001114C9 /* Song.swift in Sources */,
+				A1E9D4A12A03BF5D008C65E5 /* InvisibleRefreshViewModel.swift in Sources */,
+				A1E9D49E2A03B9B8008C65E5 /* MainViewModel.swift in Sources */,
 				A1D3D6A3294334A6001114C9 /* SwiftyJSON.swift in Sources */,
+				A1E9D4952A03B625008C65E5 /* LibraryViewModel.swift in Sources */,
 				A1D3D6842943343A001114C9 /* Model.swift in Sources */,
 				A1D3D6A5294334A6001114C9 /* CornerRadius.swift in Sources */,
 				A1D3D677294331D1001114C9 /* ContentView.swift in Sources */,
 				A1D3D6AB294A03D3001114C9 /* SongCardView.swift in Sources */,
+				A1E9D4922A027176008C65E5 /* Haptics.swift in Sources */,
 				A1D3D6B2294A044C001114C9 /* RemoteSongCardView.swift in Sources */,
 				A1D3D69C29433478001114C9 /* PlayPauseButton.swift in Sources */,
 				A1D3D69829433478001114C9 /* PlaybackFullscreenView.swift in Sources */,
 				A1D3D69929433478001114C9 /* PlaybackbarView.swift in Sources */,
 				A1D3D6A4294334A6001114C9 /* BlurView.swift in Sources */,
+				A1E9D4972A03B90D008C65E5 /* MusicManager.swift in Sources */,
 				A1D3D69A29433478001114C9 /* InvisibleRefreshView.swift in Sources */,
+				A1E9D4A32A03C29F008C65E5 /* SearchViewModel.swift in Sources */,
 				A1D3D69B29433478001114C9 /* ProgessView.swift in Sources */,
 				A1D3D68B2943345E001114C9 /* PlaylistDetailView.swift in Sources */,
 				A1D3D6892943345E001114C9 /* PlaylistView.swift in Sources */,
 				A1D3D69E29433478001114C9 /* NowPlayingView.swift in Sources */,
 				A1D3D675294331D1001114C9 /* MusicLandApp.swift in Sources */,
+				A1E9D4992A03B91C008C65E5 /* AppleMusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

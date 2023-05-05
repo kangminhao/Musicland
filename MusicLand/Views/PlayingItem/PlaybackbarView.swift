@@ -12,7 +12,7 @@ struct PlaybackbarView: View {
     
     var animation: Namespace.ID
     
-    @EnvironmentObject var model: Model
+    @EnvironmentObject var model: MusicManager
     
     @State var choosePlaylistOptionsPresented = false
     

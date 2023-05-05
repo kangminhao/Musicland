@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct PlaylistView: View {
-    
-    @EnvironmentObject var model: Model
+    @State var playlists: [MPMediaItemCollection]
+   // @EnvironmentObject var model: Model
 
     var body: some View {
         NavigationView {
@@ -30,8 +31,7 @@ struct PlaylistView: View {
                 
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 15), GridItem(.flexible(), spacing: 15)], spacing: 15) {
                     
-                    ForEach(model.playlists, id:\.self) { playlist in
-                        
+                    ForEach(playlists, id:\.self) { playlist in
                         VStack(spacing: 0) {
                             NavigationLink(
                                 destination: PlaylistDetailView(playlist: playlist),
@@ -53,8 +53,8 @@ struct PlaylistView: View {
     }
 }
 
-struct PlaylistView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaylistView()
-    }
-}
+//struct PlaylistView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlaylistView()
+//    }
+//}

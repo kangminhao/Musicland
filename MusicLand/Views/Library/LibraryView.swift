@@ -9,16 +9,16 @@ import SwiftUI
 import MediaPlayer
 
 struct LibraryView: View {
-    
-    @EnvironmentObject var model: Model
+    @State var songs: [MPMediaItem]
+    //@EnvironmentObject var model: Model
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(model.librarySongs, id:\.self) { song in
+                ForEach(songs, id:\.self) { song in
                     VStack(spacing: 0) {
                         SongCardView(song: song)
-                            .environmentObject(model)
+                            //.environmentObject(model)
                     }
                     
                 }
@@ -30,15 +30,15 @@ struct LibraryView: View {
             .navigationBarTitle(Text("Library"), displayMode: .automatic)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Text("\(model.librarySongs.count) Songs")
+                    Text("\(songs.count) Songs")
                 }
             }
         }
     }
 }
 
-struct LibraryView_Previews: PreviewProvider {
-    static var previews: some View {
-        LibraryView()
-    }
-}
+//struct LibraryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LibraryView()
+//    }
+//}

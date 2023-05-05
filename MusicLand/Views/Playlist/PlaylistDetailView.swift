@@ -12,8 +12,6 @@ struct PlaylistDetailView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @EnvironmentObject var model: Model
-    
     let playlist: MPMediaItemCollection
     
     var body: some View {
@@ -47,8 +45,8 @@ struct PlaylistDetailView: View {
                             .onTapGesture {
                                 let desc = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: playlist.items))
                                 
-                                model.musicPlayer.setQueue(with: desc)
-                                model.musicPlayer.play()
+                                MusicManager.shared.musicPlayer.setQueue(with: desc)
+                                MusicManager.shared.musicPlayer.play()
                             }
                             
                             HStack {
@@ -64,8 +62,8 @@ struct PlaylistDetailView: View {
                             .onTapGesture {
                                 let desc = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: playlist.items.shuffled()))
                                 
-                                model.musicPlayer.setQueue(with: desc)
-                                model.musicPlayer.play()
+                                MusicManager.shared.musicPlayer.setQueue(with: desc)
+                                MusicManager.shared.musicPlayer.play()
                             }
                         }
                     }
@@ -85,7 +83,6 @@ struct PlaylistDetailView: View {
                 ForEach(playlist.items, id:\.self) { song in
                     VStack(spacing: 0) {
                         SongCardView(song: song)
-                            .environmentObject(model)
                     }
                 }
                 
